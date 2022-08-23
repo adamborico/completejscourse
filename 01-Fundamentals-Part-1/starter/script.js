@@ -90,7 +90,7 @@ const language = 'spanish';
 
 const country = 'Spain';
 const continent = 'Europe';
-let population = 130;
+let population = 43;
 const isIsland = false;
 
 const description =`${country} is in ${continent}
@@ -130,6 +130,30 @@ if (language === 'spanish' && population > 50 && !isIsland)
  console.log(`${country} does not meet your criteria :(`);
  }
 
+ switch(language) {
+    case 'chinese':
+    case 'mandarin':
+        console.log('MOST number of native speakers!')
+    break
+    case 'spanish':
+        console.log('2nd place in number of native speakers')
+    break
+    case 'english':
+        console.log('3rd place')
+    break
+    case 'hindi':
+        console.log('number 4')
+    break
+    case 'arabic':
+        console.log('5th most spoken language')
+    break
+    default:
+        console.log('Great language too :D')
+ }
+
+ const average = population > 33 ? 'above' : 'below';
+
+ console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`)
 
 // Coding Challenge #3
 /* 
@@ -182,3 +206,28 @@ if(scoreDolphins > scoreKoalas && scoreDolphins >= 100){
 }else{
     console.log('nobody wins');
 }
+
+//Coding Challenge #4
+
+/* Steven wants to build a very simple tip calculator for whenever he goes eating in a
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can
+start with an if/else statement, and then try to convert it to a ternary
+operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430 
+*/
+
+
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total
+value is ${ bill + tip}`);
+
